@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2f1feb5-f1e0-485e-9dff-bccae6725c9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Button.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Page.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +32,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -52,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.PlusTest">
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.calculator.test.Solution" />
       <module name="CalculatorAutoTests" />
@@ -66,8 +68,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PlusTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CalculatorAutoTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UnitTest.Helpers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UnitTest" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest.PlusTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnitTest" type="TestNG">
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.PlusTest" />
         <item itemvalue="Application.Solution" />
       </list>
     </recent_temporary>

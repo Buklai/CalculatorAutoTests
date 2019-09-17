@@ -1,5 +1,7 @@
 package com.calculator.test.objects;
 
+import io.appium.java_client.MobileElement;
+
 /**
  * Класс кнопки приложения
  */
@@ -13,16 +15,18 @@ public class Button {
      * Идентификатор кнопки
      */
     public String Id;
+    public MobileElement Element;
 
     public Button(String name, String id) {
         Name = name;
         Id = id;
+        Element = Page.Driver.findElementByAccessibilityId(id);
     }
 
     /**
      * Нажатие кнопки
      */
-    public void Click() {
-        System.out.println("Button " + Name + " Clicked");
+    public void click() {
+       Element.click();
     }
 }

@@ -21,7 +21,17 @@ public class Input {
             Element = Page.Driver.findElementByAccessibilityId(id);
         }
 
+        public String getText() {
+            return Element.getText();
+        }
+
         public void click(){
             Element.click();
         }
+        public void clean() {
+            Element.clear();
+        }
+      public void set(String value){
+        Element.setValue(value);
+    }
 }

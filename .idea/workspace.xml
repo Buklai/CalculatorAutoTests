@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2f1feb5-f1e0-485e-9dff-bccae6725c9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/GBoardButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitTest/MinusTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/MinusTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitTest/PlusTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/PlusTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/GBoard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Input.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Page.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,15 +58,38 @@
     </option>
   </component>
   <component name="RunManager" selected="TestNG.PlusTest">
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.calculator.test.Solution" />
+    <configuration name="MinusTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CalculatorAutoTests" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.calculator.test.*" />
+          <option name="PATTERN" value="UnitTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="UnitTest" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest.MinusTest" />
+      <option name="METHOD_NAME" value="DeductTwoIntPositiveComplexSimple" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MinusTest.DeductTwoIntPositiveComplexSimple" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CalculatorAutoTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UnitTest" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest.MinusTest" />
+      <option name="METHOD_NAME" value="DeductTwoIntPositiveComplexSimple" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -79,6 +105,42 @@
       <option name="PACKAGE_NAME" value="UnitTest" />
       <option name="MAIN_CLASS_NAME" value="UnitTest.PlusTest" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlusTest.SumTwoDoubleBorderline" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CalculatorAutoTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UnitTest" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest.PlusTest" />
+      <option name="METHOD_NAME" value="SumTwoDoubleBorderline" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlusTest.SumTwoIntPositiveComplexSimple" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CalculatorAutoTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UnitTest" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest.PlusTest" />
+      <option name="METHOD_NAME" value="SumTwoIntPositiveComplexSimple" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -107,7 +169,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.PlusTest" />
-        <item itemvalue="Application.Solution" />
+        <item itemvalue="TestNG.MinusTest" />
+        <item itemvalue="TestNG.MinusTest.DeductTwoIntPositiveComplexSimple" />
+        <item itemvalue="TestNG.PlusTest.SumTwoDoubleBorderline" />
+        <item itemvalue="TestNG.PlusTest.SumTwoIntPositiveComplexSimple" />
       </list>
     </recent_temporary>
   </component>

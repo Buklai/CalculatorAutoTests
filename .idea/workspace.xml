@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2f1feb5-f1e0-485e-9dff-bccae6725c9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/GBoardButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitTest/MinusTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/MinusTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitTest/PlusTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/PlusTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/GBoard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitTest/ClickabilityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/ClickabilityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitTest/DivideTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/DivideTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitTest/MultiplyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/MultiplyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/GBoardButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/GBoardButton.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +55,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.PlusTest">
-    <configuration name="MinusTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ClickabilityTest">
+    <configuration name="ClickabilityTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CalculatorAutoTests" />
       <extension name="coverage">
         <pattern>
@@ -67,8 +65,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="UnitTest" />
-      <option name="MAIN_CLASS_NAME" value="UnitTest.MinusTest" />
-      <option name="METHOD_NAME" value="DeductTwoIntPositiveComplexSimple" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest.ClickabilityTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -76,7 +73,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MinusTest.DeductTwoIntPositiveComplexSimple" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ClickabilityTest.KeyboardMinusNumberLeft (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CalculatorAutoTests" />
       <extension name="coverage">
         <pattern>
@@ -85,9 +82,45 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="UnitTest" />
-      <option name="MAIN_CLASS_NAME" value="UnitTest.MinusTest" />
-      <option name="METHOD_NAME" value="DeductTwoIntPositiveComplexSimple" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest.ClickabilityTest" />
+      <option name="METHOD_NAME" value="KeyboardMinusNumberLeft" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClickabilityTest.KeyboardMinusNumberLeft" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CalculatorAutoTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UnitTest" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest.ClickabilityTest" />
+      <option name="METHOD_NAME" value="KeyboardMinusNumberLeft" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="0" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MultiplyTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CalculatorAutoTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UnitTest" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest.MultiplyTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -105,42 +138,6 @@
       <option name="PACKAGE_NAME" value="UnitTest" />
       <option name="MAIN_CLASS_NAME" value="UnitTest.PlusTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlusTest.SumTwoDoubleBorderline" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="CalculatorAutoTests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="UnitTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="UnitTest" />
-      <option name="MAIN_CLASS_NAME" value="UnitTest.PlusTest" />
-      <option name="METHOD_NAME" value="SumTwoDoubleBorderline" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlusTest.SumTwoIntPositiveComplexSimple" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="CalculatorAutoTests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="UnitTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="UnitTest" />
-      <option name="MAIN_CLASS_NAME" value="UnitTest.PlusTest" />
-      <option name="METHOD_NAME" value="SumTwoIntPositiveComplexSimple" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -168,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ClickabilityTest" />
+        <item itemvalue="TestNG.ClickabilityTest.KeyboardMinusNumberLeft (1)" />
+        <item itemvalue="TestNG.ClickabilityTest.KeyboardMinusNumberLeft" />
+        <item itemvalue="TestNG.MultiplyTest" />
         <item itemvalue="TestNG.PlusTest" />
-        <item itemvalue="TestNG.MinusTest" />
-        <item itemvalue="TestNG.MinusTest.DeductTwoIntPositiveComplexSimple" />
-        <item itemvalue="TestNG.PlusTest.SumTwoDoubleBorderline" />
-        <item itemvalue="TestNG.PlusTest.SumTwoIntPositiveComplexSimple" />
       </list>
     </recent_temporary>
   </component>

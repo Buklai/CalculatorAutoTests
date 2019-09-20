@@ -1,23 +1,25 @@
 package UnitTest;
 
-import UnitTest.Helpers.DriverHelper;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
+import com.calculator.test.objects.Page;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import java.net.MalformedURLException;
 
 /**
  * Класс для тестирования операции "Деления"
  */
 public class DivideTest {
-    public AndroidDriver<AndroidElement> androidDriver;
+    public Page page;
 
     @BeforeTest
-    public void BeforeTest() throws MalformedURLException {
-        androidDriver = DriverHelper.initAndroidDriver();
+    public void BeforeTest() {
+        page = new Page("MainPage");
+    }
+
+    @AfterMethod
+    public void AfterMethod() {
+        page.inputFieldLeft.clean();
+        page.inputFieldRight.clean();
     }
 
     /**
@@ -25,16 +27,13 @@ public class DivideTest {
      */
     @Test
     public void DivideTwoIntPositiveSimple() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("20");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.click();
-        el2.sendKeys("5");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("divisionButton");
-        el3.click();
+        page.inputFieldLeft.set("20");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "20.00 / 5.00 = 4.00");
+        page.inputFieldRight.set("5");
+
+        page.divisionButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "20.00 / 5.00 = 4.00");
     }
 
     /**
@@ -42,16 +41,13 @@ public class DivideTest {
      */
     @Test
     public void DivideTwoIntPositiveComplex() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("456123");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.click();
-        el2.sendKeys("7899999");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("divisionButton");
-        el3.click();
+        page.inputFieldLeft.set("456123");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "456123.00 / 7899999.00 = 0.0577371");
+        page.inputFieldRight.set("7899999");
+
+        page.divisionButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "456123.00 / 7899999.00 = 0.0577371");
     }
 
     /**
@@ -59,16 +55,13 @@ public class DivideTest {
      */
     @Test
     public void DivideTwoIntPositiveComplexSimple() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("8");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.click();
-        el2.sendKeys("456789");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("divisionButton");
-        el3.click();
+        page.inputFieldLeft.set("8");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "8.00 / 456789.00 = 0.000017513556587");
+        page.inputFieldRight.set("456789");
+
+        page.divisionButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "8.00 / 456789.00 = 0.000017513556587");
     }
 
     /**
@@ -76,16 +69,13 @@ public class DivideTest {
      */
     @Test
     public void DivideIntBorderlinePositiveComplex() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("99999999");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.click();
-        el2.sendKeys("99999");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("divisionButton");
-        el3.click();
+        page.inputFieldLeft.set("99999999");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "99999999.00 / 999999.00 = 100.000099000099");
+        page.inputFieldRight.set("999999");
+
+        page.divisionButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "99999999.00 / 999999.00 = 100.000099000099");
     }
 
     /**
@@ -93,16 +83,13 @@ public class DivideTest {
      */
     @Test
     public void DivideIntBorderlinePositiveSimple() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("2");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.click();
-        el2.sendKeys("0");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("divisionButton");
-        el3.click();
+        page.inputFieldLeft.set("2");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "2.00 / 0.00 = Please, fill the input fields correctly");
+        page.inputFieldRight.set("0");
+
+        page.divisionButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "2.00 / 0.00 = Error");
     }
 
     /**
@@ -110,16 +97,13 @@ public class DivideTest {
      */
     @Test
     public void DivideTwoDoublePositiveSimple() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("5.56");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.click();
-        el2.sendKeys("0.2");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("divisionButton");
-        el3.click();
+        page.inputFieldLeft.set("5.56");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "5.56 / 0.20 = 27.80");
+        page.inputFieldRight.set("0.2");
+
+        page.divisionButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "5.56 / 0.20 = 27.80");
     }
 
     /**
@@ -127,16 +111,13 @@ public class DivideTest {
      */
     @Test
     public void DivideTwoDoublePositiveComplex() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("65.412356");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.click();
-        el2.sendKeys("2.432111");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("divisionButton");
-        el3.click();
+        page.inputFieldLeft.set("65.875233");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "65.875233 / 2.432111 = 27.08561944");
+        page.inputFieldRight.set("2.432111");
+
+        page.divisionButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "65.875233 / 2.432111 = 27.08561944");
     }
 
     /**
@@ -144,16 +125,13 @@ public class DivideTest {
      */
     @Test
     public void DivideTwoDoublePositiveComplexSimple() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("65.412356");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.click();
-        el2.sendKeys("0.3");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("divisionButton");
-        el3.click();
+        page.inputFieldLeft.set("65.875233");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "65.875233 / 0.30 = 219.58411");
+        page.inputFieldRight.set("0.3");
+
+        page.divisionButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "65.875233 / 0.30 = 219.58411");
     }
 
     /**
@@ -161,16 +139,13 @@ public class DivideTest {
      */
     @Test
     public void DivideTwoDoubleBorderlinePositiveComplex() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("111.1111");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.click();
-        el2.sendKeys("0.9999");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("divisionButton");
-        el3.click();
+        page.inputFieldLeft.set("111.1111");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "111.1111 / 0.9999 = 111.122212");
+        page.inputFieldRight.set("0.9999");
+
+        page.divisionButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "111.1111 / 0.9999 = 111.122212");
     }
 
 
@@ -179,15 +154,12 @@ public class DivideTest {
      */
     @Test
     public void DivideTwoDoubleBorderlinePositiveSimple() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("0.1");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.click();
-        el2.sendKeys("0.1");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("divisionButton");
-        el3.click();
+        page.inputFieldLeft.set("0.1");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "0.10 / 0.10 = 1");
+        page.inputFieldRight.set("0.1");
+
+        page.divisionButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "0.10 / 0.10 = 1");
     }
 }

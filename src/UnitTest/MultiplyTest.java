@@ -1,39 +1,38 @@
 package UnitTest;
 
-import UnitTest.Helpers.DriverHelper;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
+import com.calculator.test.objects.Page;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import java.net.MalformedURLException;
 
 /**
  * Класс для тестирования операции "Умножения"
  */
 public class MultiplyTest {
-
-    public AndroidDriver<AndroidElement> androidDriver;
+    public Page page;
 
     @BeforeTest
-    public void BeforeTest() throws MalformedURLException {
-        androidDriver = DriverHelper.initAndroidDriver();
+    public void BeforeTest() {
+        page = new Page("MainPage");
+    }
+
+    @AfterMethod
+    public void AfterMethod() {
+        page.inputFieldLeft.clean();
+        page.inputFieldRight.clean();
     }
     /**
      * Умножение двух целых коротких чисел с положительным результатом
      */
     @Test
     public void MultiplyTwoIntPositiveSimple() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("5");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.sendKeys("4");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("multiplicationButton");
-        el3.click();
+        page.inputFieldLeft.set("5");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "5.00 * 4.00 = 20.00");
+        page.inputFieldRight.set("4");
+
+        page.multiplicationButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "5.00 * 4.00 = 20.00");
     }
 
     /**
@@ -41,15 +40,13 @@ public class MultiplyTest {
      */
     @Test
     public void MultiplyTwoIntPositiveComplex() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("78945612");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.sendKeys("12345");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("multiplicationButton");
-        el3.click();
+        page.inputFieldLeft.set("78945612");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "78945612.00 * 12345.00 = 974583580140.00");
+        page.inputFieldRight.set("12345");
+
+        page.multiplicationButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "78945612.00 * 12345.00 = 974583580140.00");
     }
 
     /**
@@ -57,15 +54,13 @@ public class MultiplyTest {
      */
     @Test
     public void MultiplyTwoIntPositiveSimpleComplex() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("456555555");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.sendKeys("1");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("multiplicationButton");
-        el3.click();
+        page.inputFieldLeft.set("456555555");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "456555555.00 * 1.00 = 456555555.00");
+        page.inputFieldRight.set("1");
+
+        page.multiplicationButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "456555555.00 * 1.00 = 456555555.00");
     }
 
     /**
@@ -73,15 +68,13 @@ public class MultiplyTest {
      */
     @Test
     public void MultiplyTwoIntBorderlinePositiveComplex() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("9999999");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.sendKeys("99999");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("multiplicationButton");
-        el3.click();
+        page.inputFieldLeft.set("9999999");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "9999999.00 * 999999.00 = 9999989000001.00");
+        page.inputFieldRight.set("999999");
+
+        page.multiplicationButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "9999999.00 * 999999.00 = 9999989000001.00");
     }
 
     /**
@@ -89,15 +82,13 @@ public class MultiplyTest {
      */
     @Test
     public void MultiplyTwoIntBorderlinePositiveSimple() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("0");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.sendKeys("0");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("multiplicationButton");
-        el3.click();
+        page.inputFieldLeft.set("0");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "0.00 * 0.00 = 0.00");
+        page.inputFieldRight.set("0");
+
+        page.multiplicationButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "0.00 * 0.00 = 0.00");
     }
 
     /**
@@ -105,15 +96,13 @@ public class MultiplyTest {
      */
     @Test
     public void MultiplyTwoDoublePositiveSimple() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("5.56");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.sendKeys("0.2");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("multiplicationButton");
-        el3.click();
+        page.inputFieldLeft.set("5.56");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "5.56 * 0.20 = 1.112");
+        page.inputFieldRight.set("0.2");
+
+        page.multiplicationButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "5.56 * 0.20 = 1.112");
     }
 
     /**
@@ -121,15 +110,13 @@ public class MultiplyTest {
      */
     @Test
     public void MultiplyTwoDoublePositiveComplex() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("48.521452");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.sendKeys("74.55551");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("multiplicationButton");
-        el3.click();
+        page.inputFieldLeft.set("48.521452");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "48.521452 * 74.55551 = 3617.54159980052");
+        page.inputFieldRight.set("74.55551");
+
+        page.multiplicationButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "48.521452 * 74.55551 = 3617.54159980052");
     }
 
     /**
@@ -137,15 +124,13 @@ public class MultiplyTest {
      */
     @Test
     public void MultiplyTwoDoublePositiveComplexSimple() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("0.789456321");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.sendKeys("0.5");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("multiplicationButton");
-        el3.click();
+        page.inputFieldLeft.set("0.789456321");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "0.789456321 * 0.50 = 0.39472816");
+        page.inputFieldRight.set("0.5");
+
+        page.multiplicationButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "0.789456321 * 0.50 = 0.39472816");
     }
 
     /**
@@ -153,15 +138,13 @@ public class MultiplyTest {
      */
     @Test
     public void MultiplyTwoDoubleBorderlinePositiveComplex() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("9.9999999");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.sendKeys("9.99999");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("multiplicationButton");
-        el3.click();
+        page.inputFieldLeft.set("9.9999999");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "9.9999999 * 9.99999 = 99.999899000001");
+        page.inputFieldRight.set("9.99999");
+
+        page.multiplicationButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "9.9999999 * 9.99999 = 99.999899000001");
     }
 
     /**
@@ -169,14 +152,12 @@ public class MultiplyTest {
      */
     @Test
     public void MultiplyTwoDoubleBorderlinePositiveSimple() {
-        MobileElement el1 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldLeft");
-        el1.click();
-        el1.sendKeys("0.1");
-        MobileElement el2 = (MobileElement) androidDriver.findElementByAccessibilityId("inputFieldRight");
-        el2.sendKeys("0.01");
-        MobileElement el3 = (MobileElement) androidDriver.findElementByAccessibilityId("multiplicationButton");
-        el3.click();
+        page.inputFieldLeft.set("0.1");
 
-        org.testng.Assert.assertEquals(androidDriver.findElementById("com.vbanthia.androidsampleapp:id/resultTextView").getText(), "0.1 * 0.01 = 0.001");
+        page.inputFieldRight.set("0.01");
+
+        page.multiplicationButton.click();
+
+        org.testng.Assert.assertEquals(page.resultTextView.getText(), "0.10 * 0.01 = 0.001");
     }
 }

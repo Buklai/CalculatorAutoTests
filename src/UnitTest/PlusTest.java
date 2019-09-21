@@ -15,6 +15,7 @@ public class PlusTest {
     public void BeforeTest() {
         page = new Page("MainPage");
     }
+
     @AfterMethod
     public void AfterMethod() {
         page.inputFieldLeft.clean();

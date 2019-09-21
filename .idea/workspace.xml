@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2f1feb5-f1e0-485e-9dff-bccae6725c9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/GBoard/GBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitTest/ClickabilityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/ClickabilityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/GBoardButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/GBoard/GBoardButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitTest/Helpers/DriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/Helpers/DriverHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitTest/PlusTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/PlusTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/GBoard/GBoardButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/GBoard/GBoardButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Input.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Page.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,7 +57,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ClickabilityTest">
+  <component name="RunManager" selected="TestNG.PlusTest and 1 more (1)">
     <configuration name="ClickabilityTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CalculatorAutoTests" />
       <extension name="coverage">
@@ -91,38 +93,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClickabilityTest.KeyboardMinusNumberLeft" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PlusTest and 1 more (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CalculatorAutoTests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="UnitTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="UnitTest" />
-      <option name="MAIN_CLASS_NAME" value="UnitTest.ClickabilityTest" />
-      <option name="METHOD_NAME" value="KeyboardMinusNumberLeft" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="0" />
+      <option name="TEST_OBJECT" value="PATTERN" />
       <properties />
       <listeners />
+      <patterns>
+        <pattern testClass="UnitTest.PlusTest" />
+        <pattern testClass="UnitTest.ClickabilityTest" />
+      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MultiplyTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PlusTest and 1 more" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CalculatorAutoTests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="UnitTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="UnitTest" />
-      <option name="MAIN_CLASS_NAME" value="UnitTest.MultiplyTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="TEST_OBJECT" value="PATTERN" />
       <properties />
       <listeners />
+      <patterns>
+        <pattern testClass="UnitTest.PlusTest" />
+        <pattern testClass="UnitTest.MultiplyTest" />
+      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.PlusTest and 1 more (1)" />
+        <item itemvalue="TestNG.PlusTest and 1 more" />
+        <item itemvalue="TestNG.PlusTest" />
         <item itemvalue="TestNG.ClickabilityTest" />
         <item itemvalue="TestNG.ClickabilityTest.KeyboardMinusNumberLeft (1)" />
-        <item itemvalue="TestNG.ClickabilityTest.KeyboardMinusNumberLeft" />
-        <item itemvalue="TestNG.MultiplyTest" />
-        <item itemvalue="TestNG.PlusTest" />
       </list>
     </recent_temporary>
   </component>

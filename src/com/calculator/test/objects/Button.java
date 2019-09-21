@@ -1,5 +1,6 @@
 package com.calculator.test.objects;
 
+import UnitTest.Helpers.DriverHelper;
 import io.appium.java_client.MobileElement;
 
 /**
@@ -20,7 +21,7 @@ public class Button {
     public Button(String name, String id) {
         Name = name;
         Id = id;
-        Element = Page.Driver.findElementByAccessibilityId(id);
+        Element = DriverHelper.Driver.findElementByAccessibilityId(id);
     }
 
     /**

@@ -1,12 +1,5 @@
 package com.calculator.test.objects;
 
-import UnitTest.Helpers.DriverHelper;
-import com.calculator.test.objects.GBoard.GBoardButton;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
-
-import java.net.MalformedURLException;
-
 /**
  * Класс страницы приложения
  */
@@ -28,18 +21,7 @@ public class Page {
     public Input inputFieldRight;
     public Input resultTextView;
 
-
     public static final String AppName = "com.vbanthia.androidsampleapp";
-
-    public static AndroidDriver<AndroidElement> Driver;
-
-    static {
-        try {
-            Driver = DriverHelper.initAndroidDriver();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-    }
 
     public Page(String name) {
         Name = name;

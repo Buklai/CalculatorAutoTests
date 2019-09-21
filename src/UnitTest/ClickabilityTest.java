@@ -1,5 +1,6 @@
 package UnitTest;
 
+import com.calculator.test.objects.GBoard.GBoard;
 import com.calculator.test.objects.Page;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
@@ -11,10 +12,12 @@ import org.testng.annotations.Test;
 public class ClickabilityTest {
 
     public Page page;
+    public GBoard gBoard;
 
     @BeforeTest
     public void BeforeTest() {
         page = new Page("MainPage");
+        gBoard = new GBoard();
     }
 
     @AfterMethod
@@ -145,7 +148,7 @@ public class ClickabilityTest {
     public void SystemMinusNumberLeft() {
         page.inputFieldLeft.click();
         page.minusButton.click();
-        page.button9.click();
+        gBoard.button9.click();
 
         page.inputFieldRight.set("3");
         page.plusButton.click();
@@ -159,8 +162,8 @@ public class ClickabilityTest {
     @Test
     public void KeyboardMinusNumberLeft() {
         page.inputFieldLeft.click();
-        page.buttonGBoardMinus.click();
-        page.button9.click();
+        gBoard.buttonGBoardMinus.click();
+        gBoard.button9.click();
 
         page.inputFieldRight.set("3");
         page.plusButton.click();
@@ -187,15 +190,15 @@ public class ClickabilityTest {
     @Test
     public void KeyboardDelete() {
         page.inputFieldLeft.set("123456789");
-        page.buttonDelete.click();
-        page.buttonDelete.click();
-        page.buttonDelete.click();
+        gBoard.buttonDelete.click();
+        gBoard.buttonDelete.click();
+        gBoard.buttonDelete.click();
 
 
         page.inputFieldRight.set("123456789");
-        page.buttonDelete.click();
-        page.buttonDelete.click();
-        page.buttonDelete.click();
+        gBoard.buttonDelete.click();
+        gBoard.buttonDelete.click();
+        gBoard.buttonDelete.click();
 
         org.testng.Assert.assertEquals(page.inputFieldLeft.getText(), "123456");
         org.testng.Assert.assertEquals(page.inputFieldRight.getText(), "123456");
@@ -207,14 +210,14 @@ public class ClickabilityTest {
     @Test
     public void KeyboardDote() {
         page.inputFieldLeft.click();
-        page.button8.click();
-        page.buttonDot.click();
-        page.button6.click();
+        gBoard.button8.click();
+        gBoard.buttonDot.click();
+        gBoard.button6.click();
 
         page.inputFieldRight.click();
-        page.button5.click();
-        page.buttonDot.click();
-        page.button1.click();
+        gBoard.button5.click();
+        gBoard.buttonDot.click();
+        gBoard.button1.click();
 
         org.testng.Assert.assertEquals(page.inputFieldLeft.getText(), "8.6");
         org.testng.Assert.assertEquals(page.inputFieldRight.getText(), "5.1");
@@ -226,14 +229,14 @@ public class ClickabilityTest {
     @Test
     public void KeyboardComma() {
         page.inputFieldLeft.click();
-        page.button5.click();
-        page.buttonComma.click();
-        page.button7.click();
+        gBoard.button5.click();
+        gBoard.buttonComma.click();
+        gBoard.button7.click();
 
         page.inputFieldRight.click();
-        page.button2.click();
-        page.buttonComma.click();
-        page.button3.click();
+        gBoard.button2.click();
+        gBoard.buttonComma.click();
+        gBoard.button3.click();
 
         org.testng.Assert.assertEquals(page.inputFieldLeft.getText(), "5,7");
         org.testng.Assert.assertEquals(page.inputFieldRight.getText(), "2,3");
@@ -242,28 +245,28 @@ public class ClickabilityTest {
     @Test
     public void NumberButtons() {
         page.inputFieldLeft.click();
-        page.button1.click();
-        page.button2.click();
-        page.button3.click();
-        page.button4.click();
-        page.button5.click();
-        page.button6.click();
-        page.button7.click();
-        page.button8.click();
-        page.button9.click();
-        page.button0.click();
+        gBoard.button1.click();
+        gBoard.button2.click();
+        gBoard.button3.click();
+        gBoard.button4.click();
+        gBoard.button5.click();
+        gBoard.button6.click();
+        gBoard.button7.click();
+        gBoard.button8.click();
+        gBoard.button9.click();
+        gBoard.button0.click();
 
         page.inputFieldRight.click();
-        page.button1.click();
-        page.button2.click();
-        page.button3.click();
-        page.button4.click();
-        page.button5.click();
-        page.button6.click();
-        page.button7.click();
-        page.button8.click();
-        page.button9.click();
-        page.button0.click();
+        gBoard.button1.click();
+        gBoard.button2.click();
+        gBoard.button3.click();
+        gBoard.button4.click();
+        gBoard.button5.click();
+        gBoard.button6.click();
+        gBoard.button7.click();
+        gBoard.button8.click();
+        gBoard.button9.click();
+        gBoard.button0.click();
 
         org.testng.Assert.assertEquals(page.inputFieldLeft.getText(), "1234567890");
         org.testng.Assert.assertEquals(page.inputFieldRight.getText(), "1234567890");

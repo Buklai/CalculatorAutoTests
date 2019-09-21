@@ -1,5 +1,6 @@
-package com.calculator.test.objects;
+package com.calculator.test.objects.GBoard;
 
+import com.calculator.test.objects.Page;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 

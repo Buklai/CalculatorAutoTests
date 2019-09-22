@@ -1,5 +1,6 @@
 package com.calculator.test.objects;
 
+import UnitTest.Helpers.DriverHelper;
 import io.appium.java_client.MobileElement;
 
 public class Input {
@@ -18,7 +19,7 @@ public class Input {
         public Input(String name, String id) {
             Name = name;
             Id = id;
-            Element = Page.Driver.findElementByAccessibilityId(id);
+            Element = DriverHelper.Driver.findElementByAccessibilityId(id);
         }
 
         public String getText() {

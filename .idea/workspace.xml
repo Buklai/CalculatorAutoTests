@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d2f1feb5-f1e0-485e-9dff-bccae6725c9c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitTest/Helpers/DriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/Helpers/DriverHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitTest/PlusTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/PlusTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/GBoard/GBoardButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/GBoard/GBoardButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calculator/test/objects/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calculator/test/objects/Page.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
